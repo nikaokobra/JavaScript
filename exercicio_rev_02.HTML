@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora Simples</title>
+</head>
+<body>
+    <label>Primeiro número:</label>
+    <input type="number" id="num1"><br>
+    <label>Sinal (+, -, *, /):</label>
+    <input type="text" id="sinal" maxlength="1"><br>
+    <label>Segundo número:</label>
+    <input type="number" id="num2"><br>
+    <button onclick="calcular()">Calcular</button>
+    <div id="resultado"></div>
+    <script>
+        function calcular() {
+            var n1 = parseFloat(document.getElementById('num1').value);
+            var n2 = parseFloat(document.getElementById('num2').value);
+            var sinal = document.getElementById('sinal').value;
+            var resultado;
+
+            switch (sinal) {
+                case '+':
+                    resultado = n1 + n2;
+                    break;
+                case '-':
+                    resultado = n1 - n2;
+                    break;
+                case '*':
+                    resultado = n1 * n2;
+                    break;
+                case '/':
+                    resultado = n2 !== 0 ? n1 / n2 : 'Divisão por zero!';
+                    break;
+                default:
+                    resultado = 'Sinal inválido!';
+            }
+            document.getElementById('resultado').innerText = "Resultado: " + resultado;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var media = prompt('digite seu conceito:');
+        media = media.toUpperCase();
+        switch (media) {
+            case 'A':
+                document.write('<h1>Excelente</h1>');
+                break;
+            case 'B':
+                document.write('<h1>Ótimo</h1>');
+                break;
+            case 'C':
+                document.write('<h1>Bom</h1>');
+                break;
+            case 'D':
+                document.write('<h1>Regular</h1>');
+                break;
+            case 'E':
+                document.write('<h1>Ruim</h1>');
+                break;
+            case 'F':
+                document.write('<h1>Não passou</h1>');
+                break;
+            default:
+                document.write('<h1>Aí cê me quebra</h1>');
+        }
+    </script>
+</body>
+</html>

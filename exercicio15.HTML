@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .classe {
+        background-color: white;
+        height: 20px;
+        border-radius: 5px;
+    }
+
+    .classe1 {
+        background-color: yellow;
+        height: 20px;
+        border-radius: 5px;
+    }
+
+    .classe2 {
+        background-color: red;
+        height: 20px;
+        border-radius: 5px;
+    }
+
+    .classe3 {
+        background-color: green;
+        height: 20px;
+        border-radius: 5px;
+    }
+</style>
+<script>
+    function mudarcor(classe) {
+        document.getElementById('campo').className = classe;
+    }
+
+    function verificarTamanho() {
+        var campo = document.getElementById('campo');
+        if (campo.value.length < 3) {
+            mudarcor('classe2');
+        } else {
+            mudarcor('classe3');
+        }
+    }
+</script>
+<body>
+    <input class="classe" id="campo" type="text"
+        onfocus="mudarcor('classe1')"
+        onblur="verificarTamanho()"
+        onkeyup="">
+</body>
+</html>
